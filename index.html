@@ -3,13 +3,97 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Teach Myself CSS - Cascade and Inheritance">
-    <title>CSS Units and Values</title>
+    <title>CSS Cascade adn Inheritance</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
-  <body>
-      <!------------------------------------------------------------
-      My CSS Cheat Sheet for learning CSS - Cascade and Inheritance
-      ------------------------------------------------------------->
-      <footer>
-      </footer>
-  </body>
+  <!-----------------------------------------------------
+My CSS Cheat Sheet for learning CSS - Cascade and Inheritance
+------------------------------------------------------>
+<body>
+  <header>
+    <h1>The Brains of CSS - Cascade &amp; Inheritance</h1>
+  </header>
+  <main class="container"></main>
+  <section>
+    <header>
+      <h2>The Cascade Effect</h2>
+    </header>
+    <div class="box">
+      <p>Importance</p>
+      <i class="fas fa-arrow-down"></i>
+      <p>Specificity </p>
+      <i class="fas fa-arrow-down"></i>
+      <p>Order</p>
+      <p><span class="highlighter">!Important</span> should only be used as a last resort, or for testing</p>
+    </div>
+  </section>
+  <section>
+    <header>
+      <h2>Conflicting Declarations</h2>
+    </header>
+    <div class="box">
+      <p>Later declarations in the document will overwrite earlier ones (read from top to bottom)</p>
+      <ol>
+        <li>Declarations in user agent style sheets (browser defaults)</li>
+        <li>Normal declarations in user style sheets(customer style set by user)</li>
+        <li>Normal declarations in author style sheets (styles set by us – web developers)</li>
+        <li>Important declarations in author style sheets</li>
+        <li>Important declarations in user style sheets</li>
+      </ol>
+    </div>
+  </section>
+  <section>
+    <header>
+      <h2>Specificity</h2>
+    </header>
+    <div class="box">
+      <p>Specificity is the measure of how specific a selector is – meaning how many elements it could match</p>
+      <ul>
+        <li>Element selectors <i class="fas fa-equals"></i> low specificity</li>
+        <li>Class selectors <i class="fas fa-greater-than"></i> Element selectors</li>
+        <li>ID selectors <i class="fas fa-greater-than"></i> Class selectors</li>
+        <li>Only !important <i class="fas fa-greater-than"></i> ID selectors</li>
+      </ul>
+      <p>The amount of specificity a selector has is measured using 4 different values which can be thought of as 1000’s 100’s 10’s and 1’s – 4 single digits in 4 columns</p>
+      <ol>
+        <li>Thousands – score 1 in this column if the declaration is inside a style attribute</li>
+        <li>Hundreds – score 1 in this column for each ID selector within the overall selector</li>
+        <li>Tens – score 1 in this column for each class or attribute selector, or pseudo-element within the overall selector</li>
+        <li>Ones – score 1 in this column for each element of selector, or pseudo-element within the overall selector</li>
+      </ol>
+      <p>So for example:</p>
+      <code>
+        /* specificity 0113 */ <br>
+        #outer div ul .nav a { }
+      </code>
+    </div>
+  </section>
+  <section>
+    <header>
+      <h2>Inheritance</h2>
+    </header>
+    <div class="box">
+      <p>CSS provides four special universal properties for specifying inheritance</p>
+      <p class="mini-header">inherit</p>
+      <p>Sets the property value to a selected element to be the same as that of its parent element</p>
+      <p class="mini-header">initial</p>
+      <p>Sets the property value to a selected element to be the same as the value set for that element in the browser’s default style sheet (if no value set by browsers default style sheet and the property is naturally inherited then the property value is set to inherit instead)</p>
+      <p class="mini-header">unset</p>
+      <p>Resets the property to its natural value which means if the property is naturally inherited it acts like inherit, otherwise it acts like initial
+      </p>
+      <p class="mini-header">revert</p>
+      <p>Reverts the property to the value it would have had if the current origin had not applied any styles to it</p>
+      <p class="highlighter">Unsurprisingly initial and unset are unsupported in IE</p>
+    </div>
+  </section>
+  <footer>
+    <!--Made by Me  - Github, Codepen, LinkedIn in and Wordpress blog for the "making of" article-->
+    <p>Designed by <abbr title="Mary Ronan">MazOnTheMoon</abbr> 2020
+      <a href="https://www.linkedin.com/in/mary-ronan/" target="_blank"> <span class="fab fa-linkedin"></span></a>
+      <a href="https://github.com/MazontheMoon" target="_blank"> <span class="fab fa-github-square"></span></a>
+      <a href="https://codepen.io/mazonthemoon/#" target="_blank"> <span class="fab fa-codepen"></span></a>
+      <a href="https://mazcodesonthemoon.wordpress.com/" target="_blank"> <span class="fab fa-wordpress"></span></a>
+    </p>
+  </footer>
+</body>
 </html>
