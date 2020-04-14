@@ -10,3 +10,30 @@ Declare variables for page
 /*=====================
 Basic Styles 
 ======================*/
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+/*set global styles*/
+body * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/*=============
+Text and fonts
+===============*/
+
+/*fallback fonts - never shall Times New Roman be seen again!!!*/
+h1,
+h2,
+p,
+a,
+li {
+  font-family: Verdana, sans-serif;
+}
