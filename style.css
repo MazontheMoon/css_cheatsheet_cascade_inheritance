@@ -10,8 +10,6 @@ Declare variables for page
   --text: #696d7d; /*Violet*/
 }
 
-/*import fonts*/
-
 /*=================
 Back to Basics
 ===================*/
@@ -108,4 +106,20 @@ p {
 
 /*special "Look at me" text highlights*/
 .highlighter {
+  font-style: italic;
+}
+
+/*=============
+Responsiveness
+===============*/
+@media screen and (max-width: 768px) {
+  .container section {
+    flex-flow: column nowrap;
+  }
+
+  section .box {
+    padding: 5px;
+    border-left: none;
+    border-top: 2px solid var(--sub-border);
+  }
 }
