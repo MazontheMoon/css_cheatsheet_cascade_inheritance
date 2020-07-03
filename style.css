@@ -89,6 +89,7 @@ h1 {
   line-height: 3.5rem;
   text-align: center;
   text-shadow: 2px 2px 2px #aaa;
+  border-bottom: 0.3rem solid var(--border);
 }
 
 h2 {
